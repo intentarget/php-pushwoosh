@@ -65,6 +65,7 @@ class CURLClient implements ICURLClient
         $this->curlRequest->setOpt(CURLOPT_ENCODING, 'gzip, deflate');
         $this->curlRequest->setOpt(CURLOPT_POST, true);
         $this->curlRequest->setOpt(CURLOPT_POSTFIELDS, $request);
+        $this->curlRequest->setOpt(CURLOPT_TIMEOUT, 30);
         $this->curlRequest->setOpt(
             CURLOPT_HTTPHEADER,
             [
